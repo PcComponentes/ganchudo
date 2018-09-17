@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ruleset name="Project rules">
+    <description>Project rules.</description>
+    <file>src</file>
+    <rule ref="PSR2"/>
+    <arg name="colors" />
+</ruleset>

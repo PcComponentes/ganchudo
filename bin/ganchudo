@@ -1,0 +1,25 @@
+#!/usr/bin/env php
+<?php
+$autoloadFiles = \array_filter(
+    [__DIR__ . '/../../../autoload.php', __DIR__ . '/../autoload.php', __DIR__ . '/../vendor/autoload.php'],
+    function (string $file) {
+        return \is_readable($file);
+    }
+);
+$autoloadFile = \array_shift($autoloadFiles);
+
+if (!$autoloadFile) {
+    echo 'ganchudo: Autoload not found.' . PHP_EOL;
+    exit(1);
+}
+
+if ($argc !==2) {
+    echo 'ganchudo: One argument accepted: Config file.' . PHP_EOL;
+    exit(1);
+}
+
+include_once $autoloadFile;
+
+$configFile = \Pccomponentes\Ganchudo\Util\Path::fullPath(getcwd(), $argv[1]);
+
+exit((new \Pccomponentes\Ganchudo\Runner())->run($configFile));
