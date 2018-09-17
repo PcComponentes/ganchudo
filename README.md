@@ -37,8 +37,8 @@ Como su nombre indica, es el tipo de etapa es la mas simple. Consiste en ejecuta
 ### Inspector Iterador
 Es una etapa un poco mas complejo que la anterior. Determinadas herramientas requieren ser ejecutadas directamente sobre cada fichero del proyecto, como por ejemplo un ```PHP -l```.
 Para cubrir esta necesidad, la etapa se define como la anterior, pero con algunas diferencias:
--```name```: Obligatorio. String con el nombre de la etapa.
--```command```: Obligatorio. String con el comando de consola a ejecutar, pero insertando en el lugar correcto la cadena ```<iterator>```, que será sustituída posteriormente por cada uno de los ficheros que produzcan coincidencia, con las opciones que vamos a detallar a continuación.
+- ```name```: Obligatorio. String con el nombre de la etapa.
+- ```command```: Obligatorio. String con el comando de consola a ejecutar, pero insertando en el lugar correcto la cadena ```<iterator>```, que será sustituída posteriormente por cada uno de los ficheros que produzcan coincidencia, con las opciones que vamos a detallar a continuación.
 - ```iterator```: Array con las siguientes opciones:
   - ```in```: Obligatorio. Array de directorios fuente.
   - ```file```: Obligatorio. Patrón de coincidencia con el nombre del fichero. Acepta el patrón glob, y patrones regulares, relativos a ```in```.
