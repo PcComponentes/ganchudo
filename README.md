@@ -65,7 +65,7 @@ exit $STATUS
 Si tienes un entorno de trabajo bajo docker-compose, el script tendría un aspecto como:
 ```
 #!/usr/bin/bash
-SCRIPT=$(docker-compose -f "<docker-compose-yml-file>" run <service-name> --rm sh -c "vendor/bin/ganchudo ganchudo.yml.dist" 2>&1)
+SCRIPT=$(docker-compose -f "<docker-compose-yml-file>" run --rm <service-name> sh -c "vendor/bin/ganchudo ganchudo.yml.dist" 2>&1)
 STATUS=$?
 echo "$SCRIPT"
 exit $STATUS
