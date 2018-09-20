@@ -33,7 +33,7 @@ class SimpleInspector implements Inspector
 
         $process->run();
 
-        return new InspectorResult($process->isSuccessful(), $process->getOutput() ?: $process->getErrorOutput());
+        return new InspectorResult($process->isSuccessful(), $process->getOutput() . $process->getErrorOutput());
     }
 
     public function name(): string

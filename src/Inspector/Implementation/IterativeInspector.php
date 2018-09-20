@@ -45,7 +45,7 @@ class IterativeInspector implements Inspector
 
             if (false === $process->isSuccessful()) {
                 $successfully = false;
-                $output .= $process->getOutput() ?: $process->getErrorOutput();
+                $output .= $process->getOutput() . $process->getErrorOutput();
             }
         }
 
