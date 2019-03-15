@@ -101,7 +101,7 @@ PAINT;
     {
         $str = <<<PAINT
 <b><fg_red>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-          <f><fg_cyan>"Dear developer, FIX THIS FUCKING SHIT NOW.<r><b><fg_red>
+          <f><fg_cyan>"Dear developer, FIX THIS MESS NOW.<r><b><fg_red>
          ___       <f><fg_cyan>Thanks for your understanding.<r><b><fg_red>
         /_ _\           <f><fg_cyan>Have a nice day."<r><b><fg_red>
        ( - - )
