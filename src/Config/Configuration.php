@@ -13,8 +13,8 @@ class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('ganchudo');
+        $treeBuilder = new TreeBuilder('ganchudo');
+        $rootNode = $treeBuilder->getRootNode();
 
         $rootNode
             ->children()
